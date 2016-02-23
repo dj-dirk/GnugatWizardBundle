@@ -1,5 +1,5 @@
 {
-    "name": "gnugat/wizard-bundle",
+    "name": "fizz/wizard-bundle",
     "type": "symfony-bundle",
     "description": "Easing Symfony2 bundle installation to one single command",
     "keywords": ["wizard", "install", "remove", "bundle", "command", "symfony"],
@@ -8,6 +8,9 @@
     "authors": [
         {
             "name": "Loïc Chardonnet"
+        },{
+            "name": "Dirk Jansen",
+            "email": "dirk@fizz.nl"
         }
     ],
     "require": {
