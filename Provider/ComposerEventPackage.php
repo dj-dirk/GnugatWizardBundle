@@ -40,6 +40,8 @@ class ComposerEventPackage implements ComposerPackageProvider
      */
     public function getPackage($name)
     {
+        $packages = array();
+
         $autoload = $this->composerEventPackage->getAutoload();
 
         $autoloadNamespaces = array();
@@ -49,15 +51,21 @@ class ComposerEventPackage implements ComposerPackageProvider
         if (isset($autoload['psr-4'])) {
             $autoloadNamespaces = array_merge($autoloadNamespaces, $autoload['psr-4']);
         }
+//        throw new \Exception(sprintf("Target: %s Name: %s",
+//            $this->composerEventPackage->getTargetDir(),
+//            $this->composerEventPackage->getName()));
+        var_dump($autoloadNamespaces);
+
 
         foreach ($autoloadNamespaces as $namespace => $paths) {
-            if ($paths && false !== strpos($paths[0], $name)) {
+//            if (!empty($paths) &&  false !== strpos($paths[0], $name)) {
+                echo "#### Register bundle ".$namespace." in AppKernel ####\n";
                 $package = new ComposerPackage();
                 $package->namespace = trim($namespace, '\\');
                 $package->name = $name;
 
                 return $package;
-            }
+//            }
         }
 
         throw new \Exception(sprintf('Package "%s" not installed', $name));
