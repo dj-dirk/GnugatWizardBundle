@@ -51,10 +51,6 @@ class ComposerEventPackage implements ComposerPackageProvider
         if (isset($autoload['psr-4'])) {
             $autoloadNamespaces = array_merge($autoloadNamespaces, $autoload['psr-4']);
         }
-//        throw new \Exception(sprintf("Target: %s Name: %s",
-//            $this->composerEventPackage->getTargetDir(),
-//            $this->composerEventPackage->getName()));
-        var_dump($autoloadNamespaces);
 
 
         foreach ($autoloadNamespaces as $namespace => $paths) {
