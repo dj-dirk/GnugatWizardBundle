@@ -55,7 +55,6 @@ class ComposerEventPackage implements ComposerPackageProvider
 
         foreach ($autoloadNamespaces as $namespace => $paths) {
 //            if (!empty($paths) &&  false !== strpos($paths[0], $name)) {
-                echo "#### Register bundle ".$namespace." in AppKernel ####\n";
                 $package = new ComposerPackage();
                 $package->namespace = trim($namespace, '\\');
                 $package->name = $name;
