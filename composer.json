@@ -15,11 +15,11 @@
     ],
     "require": {
         "composer/installers": "1.0",
-        "symfony/framework-bundle": ">=2.3,<3.0",
-        "symfony/console": ">=2.3,<3.0",
-        "symfony/validator": ">=2.3,<3.0",
+        "symfony/framework-bundle": "3.1.*",
+        "symfony/console": "3.1.*",
+        "symfony/validator": "3.1.*",
 
-        "sensio/generator-bundle": ">=2.3,<3.0"
+        "sensio/generator-bundle": "3.1.*"
     },
     "require-dev": {
         "behat/behat": "~2.0",
@@ -28,7 +28,7 @@
 
         "composer/composer": "~1.0@alpha",
 
-        "symfony/form": ">=2.3,<3.0"
+        "symfony/form": "3.1.*"
     },
     "autoload": {
         "psr-0": {
@@ -37,3 +37,4 @@
     },
     "target-dir": "Gnugat/Bundle/WizardBundle"
 }
+
